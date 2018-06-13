@@ -9,6 +9,7 @@ wget https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.8.0/ten
 # Download Darkflow -> https://github.com/thtrieu/darkflow
 wget https://github.com/thtrieu/darkflow/archive/master.zip
 # Extract Darkflow
+unzip master.zip
 
 sudo apt-get update
 sudo apt-get upgrade
