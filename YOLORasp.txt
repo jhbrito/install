@@ -4,7 +4,10 @@
 cd install
 
 # Download Tensorflow 1.8.0 -> https://github.com/lhelontra/tensorflow-on-arm/releases
+wget https://github.com/lhelontra/tensorflow-on-arm/releases/download/v1.8.0/tensorflow-1.8.0-cp35-none-linux_armv7l.whl
+
 # Download Darkflow -> https://github.com/thtrieu/darkflow
+wget https://github.com/thtrieu/darkflow/archive/master.zip
 # Extract Darkflow
 
 sudo apt-get update
@@ -26,7 +29,7 @@ pip3 uninstall mock
 pip3 install mock
 
 cd darkflow-master
-sudo pip3 install -e .
+pip3 install -e .
 
 # Download yolov2-tiny (cfg + weights): https://pjreddie.com/darknet/yolo/
 # Edit darkflow/utils/loader.py - line 121 - 16->20
