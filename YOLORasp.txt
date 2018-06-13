@@ -1,49 +1,35 @@
 # 2018-04-18-raspbian-stretch
 # SD Card -> Win32DiskImager
 
+cd install
+
+# Download Tensorflow 1.8.0 -> https://github.com/lhelontra/tensorflow-on-arm/releases
+# Download Darkflow -> https://github.com/thtrieu/darkflow
+# Extract Darkflow
+
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install python3-pip python3-dev
-
 sudo apt-get install cmake build-essential git cmake pkg-config
 sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
-
 sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
-
 sudo apt-get install libxvidcore-dev libx264-dev
-
 sudo apt-get install libgtk2.0-dev
-
 sudo apt-get install libatlas-base-dev gfortran
 sudo apt-get install python-opencv
 sudo apt-get install libqt4-dev
 
 pip3 install Cython h5py
 pip3 install opencv-python
-
-# Download Tensorflow 1.8.0 -> 
-https://github.com/lhelontra/tensorflow-on-arm/releases
-cd install
 pip3 install tensorflow-1.8.0-cp35-none-linux_armv7l.whl
-
 pip3 uninstall mock
-
 pip3 install mock
-
-# Download Darkflow -> 
-https://github.com/thtrieu/darkflow
-
-
-# Extract
 
 cd darkflow-master
 sudo pip3 install -e .
 
 # Download yolov2-tiny (cfg + weights): https://pjreddie.com/darknet/yolo/
-
-
 # Edit darkflow/utils/loader.py - line 121 - 16->20
-
 
 mv labels.txt labels.txt.o
 cp cfg/coco.names labels.txt
