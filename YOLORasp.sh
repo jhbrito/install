@@ -3,6 +3,7 @@
 # 2018-04-18-raspbian-stretch
 # SD Card -> Win32DiskImager
 
+mkdir install
 cd install
 
 # Download Tensorflow 1.8.0 -> https://github.com/lhelontra/tensorflow-on-arm/releases
