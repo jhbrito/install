@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script installs YOLO on a Raspberry Pi
+# This script installs YOLOv2 on a Raspberry Pi
 # 2018-04-18-raspbian-stretch
 # SD Card -> Win32DiskImager
 
