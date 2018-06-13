@@ -33,10 +33,20 @@ cd darkflow-master
 pip3 install -e .
 
 # Download yolov2-tiny (cfg + weights): https://pjreddie.com/darknet/yolo/
-# Edit darkflow/utils/loader.py - line 121 - 16->20
+cd cfg
+wget https://github.com/pjreddie/darknet/blob/master/cfg/yolov2-tiny.cfg
+cd ..
+cd bin
+wget https://pjreddie.com/media/files/yolov2-tiny.weights
+cd ..
 
 mv labels.txt labels.txt.o
 cp cfg/coco.names labels.txt
-python3 flow --imgdir sample_img/ --model cfg/yolov2-tiny.cfg --load bin/yolov2-tiny.weights
-python3 flow --imgdir sample_img/ --model cfg/yolov2-tiny.cfg --load bin/yolov2-tiny.weights --json
-python3 flow --model cfg/yolov2-tiny.cfg --load bin/yolov2-tiny.weights --demo camera
+
+# Edit darkflow/utils/loader.py - line 121 - 16->20
+# !!!YOU HAVE TO DO THIS YOURSELF !!!
+
+## You can now try on of these demos
+#python3 flow --imgdir sample_img/ --model cfg/yolov2-tiny.cfg --load bin/yolov2-tiny.weights
+#python3 flow --imgdir sample_img/ --model cfg/yolov2-tiny.cfg --load bin/yolov2-tiny.weights --json
+#python3 flow --model cfg/yolov2-tiny.cfg --load bin/yolov2-tiny.weights --demo camera
